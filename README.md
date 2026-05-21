@@ -26,7 +26,8 @@
 在**需要复制环境**的机器上运行：
 
 ```bash
-pip list > pip_list.txt
+python3 -m pip freeze > pip_list.txt
+
 ```
 
 ### 步骤 2：修改配置
