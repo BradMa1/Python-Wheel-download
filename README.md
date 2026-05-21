@@ -66,7 +66,7 @@ python main.py
 ### 步骤 4：安装wheel包
 
 把整个目录拷贝到目标机器：
-
+  运行install.sh执行安装命令
 ```bash
 chmod +x install.sh
 ./install.sh
