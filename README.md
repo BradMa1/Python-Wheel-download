@@ -7,12 +7,12 @@
 ## 工作流程
 
 ```
-步骤 1: 有网的机器
-  pip list > pip_list.txt          # 导出包列表
-  python main.py                    # 下载包到 packages_download/
+步骤 1: 要复制环境的机器
+  pip list > pip_list.txt          # 执行命令导出包列表，手动保存为txt格式
+  python main.py                    # 运行main.py 下载包到 packages_download/
   # 失败的包 → failed_packages.txt
 
-步骤 2: 目标机器（离线）
+步骤 2: 要安装环境的机器
   把整个目录拷贝过去
   ./install.sh                     # 一键安装
 ```
@@ -23,7 +23,7 @@
 
 ### 步骤 1：导出包列表
 
-在**有网**的机器上运行：
+在**需要复制环境**的机器上运行：
 
 ```bash
 pip list > pip_list.txt
@@ -62,7 +62,7 @@ python main.py
 
 脚本会自动读取 `pip_list.txt`，按 config.json 配置下载，失败包跳过并记录。
 
-### 步骤 4：离线安装
+### 步骤 4：安装wheel包
 
 把整个目录拷贝到目标机器：
 
